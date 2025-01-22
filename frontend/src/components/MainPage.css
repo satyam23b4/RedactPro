@@ -1,0 +1,211 @@
+body {
+  background-color: #121212;
+  color: #e0e0e0;
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 2em;
+  background: #1f1f1f;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+.navbar-title {
+  font-size: 1.8em;
+  color: #e0e0e0;
+}
+
+.navbar-title span {
+  color: #71b4fc;
+}
+
+.nav-link {
+  color: #a0a0a0;
+  text-decoration: none;
+  margin: 0 1em;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #4ec9fa;
+}
+
+.hero {
+  position: relative;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #e0e0e0;
+  overflow: hidden;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  animation: fadeIn 1.5s ease-in;
+}
+
+.hero-title {
+  font-size: 2.8em;
+  margin-bottom: 0.5em;
+}
+
+.hero-title span {
+  color: #71b4fc;
+}
+
+.hero-subtitle {
+  font-size: 1.4em;
+  margin-bottom: 2em;
+  color: #9dc5f2;
+}
+
+/* Parallax Background */
+.parallax-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #3a8df8, #753ffd, #3a8df8, #a5c8ff);
+  filter: blur(50px);
+  transform: scale(1.2);
+  animation: slowBlueHueShift 120s infinite linear; /* Slower, more subtle shift */
+  z-index: 1;
+}
+
+.try-button {
+  padding: 0.8em 2.5em;
+  font-size: 1.2em;
+  font-weight: 500;
+  background-color: #02a2f8;
+  color: #121212;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+  position: relative;
+  z-index: 2;
+}
+
+.try-button:hover {
+  background-color: #9dc5f2;
+  transform: scale(1.1);
+}
+
+.features-section, .about-section {
+  padding: 5vh 2em;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2em;
+  color: #4ec9fa;
+  margin-bottom: 0.5em;
+}
+
+.feature-list {
+  list-style-type: none;
+  padding: 0;
+  font-size: 1.1em;
+  color: #9dc5f2;
+}
+
+.feature-list li {
+  margin: 0.5em 0;
+}
+
+.section-description {
+  font-size: 1em;
+  color: #a0a0a0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85); /* Darker background */
+    display: flex; /* Change to flex to center align */
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    opacity: 1; /* Ensure the overlay is always visible */
+    transition: opacity 0.5s; /* Optional: smooth transition */
+}
+
+.popup-content {
+    background: #2e2e2e;
+    padding: 2em;
+    border-radius: 10px;
+    width: 350px;
+    text-align: center;
+    color: #e0e0e0;
+    box-shadow: 0px 0px 15px rgba(82, 114, 244, 0.5);
+    position: relative;
+    opacity: 1; /* Ensure the popup is visible */
+    transform: scale(1); /* Start at full size */
+    animation: zoomInPopup 0.5s forwards; /* Popup zoom-in animation */
+}
+
+.popup-button {
+    background-color: #02a2f8;
+    color: #121212;
+    padding: 0.6em 1.5em;
+    border: none;
+    border-radius: 8px;
+    margin: 0.7em 0;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.2em;
+    cursor: pointer;
+    color: #a0a0a0;
+}
+
+.footer {
+    padding: 1em;
+    background-color: #1e1e1e;
+    color: #a0a0a0;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+/* Animations */
+@keyframes fadeInOverlay {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes zoomInPopup {
+    from {
+        opacity: 0;
+        transform: scale(0.8); /* Start smaller */
+    }
+    to {
+        opacity: 1;
+        transform: scale(1); /* Grow to full size */
+    }
+}
+
+/* Slow, Subtle Hue Shift Animation */
+@keyframes slowBlueHueShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}

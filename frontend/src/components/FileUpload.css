@@ -1,0 +1,150 @@
+/* Blue-Themed Aesthetic Design */
+.upload-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  color: #f0f7ff;
+  background-color: #1a2e44;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  animation: fadeIn 1s ease-in;
+}
+
+.file-input {
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.upload-button {
+  padding: 0.6rem 1.4rem;
+  font-size: 1rem;
+  background-color: #4a90e2;
+  border: none;
+  border-radius: 5px;
+  color: #f0f7ff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.upload-button:hover {
+  background-color: #007acc;
+  transform: scale(1.05);
+}
+
+.loading-icon {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #374f6b;
+  border-top: 4px solid #4a90e2;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.message {
+  color: #b0c4de;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.download-link {
+  color: #4a90e2;
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+  margin-top: 1.5rem;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(26, 46, 68, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.5s ease;
+}
+
+.popup-content {
+  background-color: #2b3f5c;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 320px;
+  text-align: center;
+  position: relative;
+  animation: popup 0.4s ease;
+}
+
+.popup-header {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.close-icon {
+  font-size: 1.5rem;
+  color: #4a90e2;
+  cursor: pointer;
+}
+
+h3 {
+  color: #4a90e2;
+  margin-bottom: 0.5rem;
+}
+
+.redaction-index {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+.info-icon {
+  font-size: 0.9rem;
+  background-color: #4a90e2;
+  color: #f0f7ff;
+  border-radius: 50%;
+  padding: 0.2rem 0.5rem;
+  margin-left: 5px;
+  cursor: pointer;
+  position: relative;
+  animation: fadeIn 0.5s ease;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  width: 200px;
+  background-color: #4a90e2;
+  color: #f0f7ff;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 5px;
+  position: absolute;
+  top: -5px;
+  left: 110%;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.info-icon:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes popup {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
