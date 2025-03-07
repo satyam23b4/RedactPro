@@ -27,7 +27,7 @@ Follow these steps to run RedactPro locally:
 
 1. Clone the repository:
    ```bash
-   [git clone https://github.com/your-username/RedactPro.git](https://github.com/shvm2/RedactPro.git)
+   [git clone https://github.com/your-username/RedactPro.git](https://github.com/satyam23b42/RedactPro.git)
    cd RedactPro
    ```
 
@@ -94,5 +94,5 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 For questions or feedback, feel free to reach out:
 
-- **Portfolio**: [Shivam Singh](https://byte-shell.vercel.app/)
-- **GitHub**: [shvm2](https://github.com/shvm2)
+- **Portfolio**: [Satyam Bhattacharjee](https://byte-shell.vercel.app/)
+- **GitHub**: [satyam23b4](https://github.com/shvm2)
